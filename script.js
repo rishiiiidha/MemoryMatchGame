@@ -1,6 +1,7 @@
 const cards = document.querySelectorAll(".card");
 let matchedCards=0;
 //The forEach() method calls a function for each element in an array and not execute for empty element
+
 let cardOne, cardTwo;// initially no value allocated hence they will pointed to NULL
 let disableDeck = false;
 function flipCard(e){

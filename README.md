@@ -2,6 +2,8 @@
 
 Welcome to MemoryMatchGame, the ultimate cartoon sticker matching game! 
 
+![image](https://github.com/rishiiiidha/memory-match-game/assets/126899168/d9733320-7593-459a-8960-155a9dacadc3)
+
 ## About MemoryMatchGame
 
 MemoryMatchGame is a classic memory card game with a delightful twist. In this game, you'll match adorable cartoon stickers that will bring a smile to your face. The objective is simple: flip cards to uncover their hidden cartoon sticker content, then find the matching pairs. It's a fun and engaging way to exercise your brain and sharpen your recall skills while enjoying charming cartoon characters.

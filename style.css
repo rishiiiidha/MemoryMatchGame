@@ -1,101 +1,111 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,500;1,600;1,700&display=swap");
 
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: 'Poppins', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  min-width: 50px;
 }
-header h1{
-font-family: 'Cedarville Cursive', cursive;
-font-size: 80px;
-font-weight: 800px;
+header h1 {
+  font-size: 80px;
+  font-weight: 800px;
 }
-img{
-height:50px;
-width: 50px;
+img {
+  height: 50px;
+  width: 50px;
 }
-body{
-display: flex;
-justify-content: center;
-align-items: center;
-min-height: 100vh;
-background-color: #FF3CAC;
-background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ff3cac;
+  background-image: linear-gradient(
+    225deg,
+    #1e4800 0%,
+    #34026075 50%,
+    #003357 100%
+  );
 }
-.wrapper{
-height: 500px;
-width: 500px;
-padding: 25px;
-background-color: transparent;
-border-radius: 10px;
+.wrapper {
+  height: 500px;
+  width: 500px;
+  padding: 25px;
+  background-color: transparent;
+  border-radius: 10px;
 }
-.cards, .card, .view{
-display: flex;
-align-items: center;
-justify-content: center;
+.cards,
+.card,
+.view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.cards{
-width: 100%;
-height: 100%;
-flex-wrap: wrap;
-padding: 40px 10px 100px 10px;
+.cards {
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  padding: 40px 10px 100px 10px;
 }
-.cards .card{
-cursor: pointer;
-position: relative;
-perspective:800px;
-transform-style: preserve-3d;
-height: calc(100% / 5 );
-width: calc(100% / 5 );
-margin: 5px 10px;
+.cards .card {
+  cursor: pointer;
+  position: relative;
+  perspective: 800px;
+  transform-style: preserve-3d;
+  height: calc(100% / 5);
+  width: calc(100% / 5);
+  margin: 5px 10px;
+  border: 1px solid black;
+  border-radius: 5px;
 }
-.card.shake{
-animation: shake 0.35s ease-in-out;
+.card.shake {
+  animation: shake 0.35s ease-in-out;
 }
 @keyframes shake {
-0%, 100%{
-  transform:translateX(0)
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-13px);
+  }
+  40% {
+    transform: translateX(13px);
+  }
+  60% {
+    transform: translateX(-8px);
+  }
+  80% {
+    transform: translateX(8px);
+  }
 }
-20%{
-  transform:translateX(-13px)
+.cards .card .view {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  background: transparent;
+  border-radius: 7px;
+  backface-visibility: hidden;
+  transition: transform 0.25s linear;
+  box-shadow: 0 3px 10px rgba(20, 14, 14, 0.3);
 }
-40%{
-  transform:translateX(13px)
+.card .front-view span {
+  color: #010123;
+  font-size: 35px;
 }
-60%{
-  transform:translateX(-8px)
+.cards .back-view {
+  transform: rotateY(-90deg);
 }
-80%{
-  transform:translateX(8px)
+.cards .back-view .img {
+  min-width: 45px;
 }
+.card.flip .front-view {
+  transform: rotateY(180deg);
 }
-.cards .card .view{
-width: 100%;
-height: 100%;
-user-select: none;
-pointer-events: none;
-position: absolute;
-background:transparent;
-border-radius: 7px;
-backface-visibility: hidden;
-transition: transform 0.25s linear;
-box-shadow: 0 3px 10px rgba(20, 14, 14, 0.3);
-}
-.card .front-view span{
-color: #010123;
-font-size: 35px;
-}
-.cards .back-view{
-transform: rotateY(-90deg);
-}
-.cards .back-view .img{
-min-width: 45px;
-}
-.card.flip .front-view{
- transform: rotateY(180deg);
-}
-.card.flip .back-view{
- transform: rotateY(0);
+.card.flip .back-view {
+  transform: rotateY(0);
 }
